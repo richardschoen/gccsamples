@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
      // Print error info and set error exit code 
      //fprintf(stderr,"System command failed. Return code:%d\n", rtnsys); - Puts output to stderr
      printf("System command failed. Return code:%d\n", rtnsys);
-     strcpy(exitmessage,"System command failed.");
+     sprintf(exitmessage, "System command failed. Return message: %s", strerror( rtnsys ));
      exitcode=99;
   }       
   
