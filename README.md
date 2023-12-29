@@ -1,5 +1,5 @@
 # gccsamples
-This repository is a place for C samples created with gcc for IBM i and Linux
+This repository is a place for C and C++ samples created with gcc for IBM i and Linux
 
 # grepsrclib.cpp - Scan selected IBM i library source members for selected string
 Build command:    
