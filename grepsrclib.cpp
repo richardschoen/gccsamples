@@ -87,7 +87,7 @@ std::string exec(const char* cmd) {
 void exit_with_usage(FILE* f, const char* argv0, int rc) {
     fprintf(f, "usage: %s [-l \"srclibrary pattern\"] [-f \"srcfile pattern\"] [-m \"srcmember pattern\"] [-s \"searchforvalue\"]\n", argv0);
     fprintf(f, "Note: Make sure parameter values are delimited with double quotes as shown above.\n", argv0);
-    fprintf(f, "Example: Note: Make sure parameter values are delimited with double quotes as shown above.\n", argv0);
+    fprintf(f, "Example: grepsrclib -l \"QGPL\" -f \"QCLSRC\" -m \"*\" -s \"monmsg\"\n", argv0);
     exit(rc);
 }
 
