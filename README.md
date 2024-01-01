@@ -16,3 +16,17 @@ Parameters:
 
 Sample usage to scan QCLSRC in QGPL library:   
 ```grepsrclib -l "QGPL" -f "QCLSRC" -m "*" -s "monmsg"```
+
+# parmtest1.cpp - Command line parameter test program
+This program is a good example of passing parameters to a command line C++ program.
+Build command:    
+```g++ parmtest1.cpp -o parmtest1```   
+
+Parameters:   
+```
+--file  - Input file name
+--outputfile - Output file name
+```
+
+Sample usage:   
+```parmtest1 --file "/tmp/input.txt" -outputfile "/tmp/output.txt"```
