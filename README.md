@@ -31,3 +31,18 @@ Parameters:
 
 Sample usage:   
 ```parmtest1 --file "/tmp/input.txt" -outputfile "/tmp/output.txt"```
+
+# pingic.c - Ping using IBM i PING CL command.
+This program is a good example of calling an IBM CL command from a c program
+
+Build command:    
+```g++ parmtest1.cpp -o parmtest1```   
+
+Parameters:   
+```
+--file  - Input file name
+--outputfile - Output file name
+```
+
+Sample usage:   
+```parmtest1 --file "/tmp/input.txt" -outputfile "/tmp/output.txt"```
