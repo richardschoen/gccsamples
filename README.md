@@ -32,17 +32,46 @@ Parameters:
 Sample usage:   
 ```parmtest1 --file "/tmp/input.txt" -outputfile "/tmp/output.txt"```
 
-# pingic.c - Ping using IBM i PING CL command.
-This program is a good example of calling an IBM CL command from a c program
+# pingi.c - Ping using IBM i PING CL command.
+This program is a good example of calling the PING CL command from a c program. 
+
+```Useful since PASE does not have a ping command.```
 
 Build command:    
-```g++ parmtest1.cpp -o parmtest1```   
+```gcc pingi.c -o pingi```   
 
 Parameters:   
 ```
---file  - Input file name
---outputfile - Output file name
+parm1 = host name or IP address to ping.
 ```
 
 Sample usage:   
-```parmtest1 --file "/tmp/input.txt" -outputfile "/tmp/output.txt"```
+```pingi "8.8.8.8"```   
+
+Results:   
+```
+TCP3204: Verifying connection to host system 8.8.8.8.
+TCP3215: PING reply 1 from 8.8.8.8 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 2 from 8.8.8.8 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 3 from 8.8.8.8 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 4 from 8.8.8.8 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 5 from 8.8.8.8 took 11 ms. 256 bytes. TTL 60.
+TCP3211: Round-trip (in milliseconds) min/avg/max = 11/11/11.
+TCP3210: Connection verification statistics: 5 of 5 successful (100 %).
+PING ran successfully. Return code:0
+```
+
+```pingi "google.com"```
+
+Results:   
+```
+TCP3203: Verifying connection to host system google.com at address 108.177.122.138.
+TCP3215: PING reply 1 from 108.177.122.138 took 12 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 2 from 108.177.122.138 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 3 from 108.177.122.138 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 4 from 108.177.122.138 took 11 ms. 256 bytes. TTL 60.
+TCP3215: PING reply 5 from 108.177.122.138 took 11 ms. 256 bytes. TTL 60.
+TCP3211: Round-trip (in milliseconds) min/avg/max = 11/11/12.
+TCP3210: Connection verification statistics: 5 of 5 successful (100 %).
+PING ran successfully. Return code:0
+```
