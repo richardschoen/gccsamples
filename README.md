@@ -61,6 +61,20 @@ TCP3210: Connection verification statistics: 5 of 5 successful (100 %).
 PING ran successfully. Return code:0
 ```
 
+```pingi "8.8.8.9"```   
+
+Results:   
+```
+TCP3204: Verifying connection to host system 8.8.8.9.
+TCP3206: No response from host within 1 seconds for connection verification 1.
+TCP3206: No response from host within 1 seconds for connection verification 2.
+TCP3206: No response from host within 1 seconds for connection verification 3.
+TCP3206: No response from host within 1 seconds for connection verification 4.
+TCP3206: No response from host within 1 seconds for connection verification 5.
+TCP3210: Connection verification statistics: 0 of 5 successful (0 %).
+PING ran successfully. Return code:0
+```
+
 ```pingi "google.com"```
 
 Results:   
